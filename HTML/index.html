@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Abraao da Silva's ME Portfolio</title>
+    <meta
+        content="Explore Abraao da Silva's Mechanical Engineering Portfolio. Discover a showcase of innovative projects, technical skill, and a unique blend of engineering and computing from a dedicated student at North Central College."
+        name="description" />
+    <meta content="Abraao da Silva's ME Portfolio" property="og:title" />
+    <meta content="Explore Abraao da Silva's Mechanical Engineering Portfolio." property="og:description" />
+    <meta content="../images/PXL_20240321_224244881.jpg" property="og:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- Custom CSS (replace Webflow CSS) -->
+    <link rel="stylesheet" href="../Styles/styles.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: { families: ["Open Sans:300,400,600,700", "PT Sans:400,700", "Inter:300,400,600,700"] }
+        });
+    </script>
+
+    <!-- Favicon -->
+    <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="../images/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container-navigation">
+            <div class="navigation-left">
+                <div>
+                    <a href="/" class="link-block w-inline-block">
+                        <img src="../images/logo.png" loading="lazy" width="45" alt="Logo" class="logo" />
+                        <div class="text-block logoname">Abraao <span class="text-span">da Silva</span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="navigation-middle">
+                <nav class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About Me</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/browse" class="nav-link">Resume</a>
+                    <a href="/contact" class="nav-link">Contact me</a>
+                </nav>
+            </div>
+            <div class="navigation-right">
+                <a href="https://www.linkedin.com/in/abraao-da-silva/" target="_blank" class="link-block-7">
+                    <div class="div-block-13">
+                        <div class="text-block-5 linkedin">Linked</div>
+                        <img src="../images/Linkedin.svg" loading="lazy" width="30" height="30" alt="LinkedIn" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="section-header">
+        <div class="container-regular">
+            <div class="container">
+                <div class="detail text-color-primary portfolio-hp">HOME</div>
+            </div>
+            <div class="header-title-grid">
+                <div class="header-content">
+                    <h2 class="heading-2">Hi, I'm Abraão (Abe)!</h2>
+                    <p class="paragraph">
+                        I'm a graduating <span class="about_me_bold">Mechanical Engineering</span> student passionate
+                        about robotics, design, and manufacturing.
+                        <br><br>
+                        <strong>Some of my skills:</strong><br />
+                        SolidWorks, PTC (Creo, Onshape & Windchill), SAP, PDM, Robot Kinematics & Dynamics, Lean
+                        Manufacturing, FEA, Arduino, MATLAB, Python, Java, HTML, CSS, JavaScript.
+                        <br><br>
+                        Explore my portfolio to see my work!
+                    </p>
+                    <div class="div-block-3">
+                        <a href="/portfolio" class="my-portfolio-button">My Portfolio</a>
+                        <a href="/browse" class="contact-me-button">My Resume</a>
+                    </div>
+                </div>
+                <div class="div-block-11">
+                    <img src="../images/PXL_20240321_224244881-p-500.jpg" loading="lazy" width="350"
+                        alt="Abraao da Silva" class="image" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section (Dynamically Fetched from Supabase) -->
+    <section class="featured">
+        <h3 class="heading-4">Internship Experience & Projects</h3>
+        <div class="projects"></div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-section">
+        <div class="container-regular">
+            <div>
+                <a href="/" class="link-block">
+                    <img src="../images/logo.png" loading="lazy" width="45" alt="Logo" class="logo" />
+                    <div class="text-block logoname">Abraao <span class="text-span">da Silva</span></div>
+                </a>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-left-column">
+                    <div class="footer-column">
+                        <div class="margin-bottom-16">
+                            <div class="detail text-color-gray-400">PAGES</div>
+                        </div>
+                        <a href="/" class="footer-link">Home</a>
+                        <a href="/about" class="footer-link">About Me</a>
+                        <a href="/portfolio" class="footer-link">Portfolio</a>
+                        <a href="/browse" class="footer-link">Resume</a>
+                        <a href="/contact" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase Database Script -->
+    <script type="module">
+        import { createClient } from "https://esm.sh/@supabase/supabase-js";
+
+        // Replace with your actual Supabase credentials
+        const supabaseUrl = "https://dzmmwefmdmwtcihungpt.supabase.co";
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR6bW13ZWZtZG13dGNpaHVuZ3B0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAwOTMzODQsImV4cCI6MjA1NTY2OTM4NH0.1_KNeEq_LA-lqxr4_SPXL7osfqmMay60txq_d3nWJj4";
+
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+
+        async function loadProjects() {
+            let projectsContainer = document.querySelector(".projects");
+            projectsContainer.innerHTML = "<p>Loading projects...</p>"; // Temporary message
+
+            let { data: projects, error } = await supabase.from("projects").select("title, description, image, category, link");
+
+            if (error) {
+                console.error("Error loading projects:", error);
+                projectsContainer.innerHTML = "<p>Error loading projects. Try again later.</p>";
+                return;
+            }
+
+            projectsContainer.innerHTML = ""; // Clear temporary message
+
+            projects.forEach(proj => {
+                let projectDiv = document.createElement("div");
+                projectDiv.className = "collection-item w-dyn-item";
+                projectDiv.innerHTML = `
+            <div class="div-block-7">
+                <a href="${proj.link}" class="featured-post-picture-link-block w-inline-block">
+                    <div class="div-block-6">
+                        <div style="background-color:hsla(210, 92.48%, 51.17%, 0.74)" class="blog-category homepage">
+                            ${proj.category}
+                        </div>
+                        <img src="${proj.image}" loading="lazy" width="300" alt="${proj.title}" class="image-2" />
+                    </div>
+                </a>
+            </div>
+            <a href="${proj.link}" class="feature-project-post-link-block w-inline-block">
+                <div class="div-block-5">
+                    <h4 class="heading-5">${proj.title}</h4>
+                    <p class="paragraph-2">${proj.description}</p>
+                </div>
+            </a>
+        `;
+                projectsContainer.appendChild(projectDiv);
+            });
+        }
+
+
+
+        // Load projects when the page loads
+        loadProjects();
+    </script>
+
+
+
+
+
+</body>
+
+</html>

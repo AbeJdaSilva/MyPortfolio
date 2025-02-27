@@ -1,0 +1,35 @@
+body {
+  color: #333;
+  background-color: #fff;
+  min-height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/*Header name styling*/
+
+.page-title {
+  border-color: transparent;
+  border-bottom: black 1px;
+  border-style: solid;
+  min-width: 100%;
+  max-width: 1200px;
+}
+.page-tile-name {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #443fde;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  justify-self: center;
+}
+.loading-projects-paragraph {
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+
+  min-height: 400px;
+}

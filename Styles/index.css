@@ -1,0 +1,159 @@
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-content {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+}
+.header-title-grid {
+  display: grid;
+  margin-top: 50px;
+  grid-column-gap: 38px;
+  flex-direction: row;
+  grid-template-columns: 1fr min-content;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.profile-div img {
+  object-fit: cover;
+  border-radius: 175px;
+  width: 350px;
+  max-width: none;
+  height: 350px;
+  margin: 0;
+}
+.heading-2 {
+  color: black;
+  margin-bottom: 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 68px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.index-header-paragraph {
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "Exo", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.connection-buttons-div {
+  justify-content: flex-start;
+  min-width: 100%;
+  max-width: 100%;
+  margin-right: 20px;
+  padding-right: 65px;
+  display: flex;
+  font-family: Open Sans, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.my-portfolio-button {
+  color: white;
+  cursor: pointer;
+  background-color: #443fde;
+  border-radius: 4px;
+  flex: none;
+  margin-left: 0;
+  margin-right: 10px;
+  padding: 10px 40px;
+
+  transition: all 0.3s;
+}
+.my-resume-button {
+  color: white;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 4px;
+  flex: none;
+  padding: 10px 40px;
+  transition: all 0.3s;
+}
+
+.heading-4 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  border-color: transparent;
+  border-bottom: black 1px;
+  border-style: solid;
+  width: 100%;
+  max-width: 1200px;
+  height: 50px;
+}
+.content-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/*Projects*/
+.featured {
+  margin: 100px 0px;
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.project-img-cat {
+  display: block;
+  position: relative;
+  width: 300px;
+}
+
+.project-category {
+  font-size: 16px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  background-color: hsla(210, 92.48%, 51.17%, 0.74);
+  border-top-left-radius: 0;
+  padding-left: 13px;
+  padding-right: 13px;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+
+.project-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.project-description {
+  flex-flow: column;
+  margin-left: 10px;
+  display: flex;
+  font-family: "Open sans", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+.description-heading {
+  text-align: left;
+  cursor: pointer;
+  max-width: 400px;
+  margin-bottom: 10px;
+  font-family: Open Sans, sans-serif;
+  font-size: 26px;
+  line-height: normal;
+  font-weight: 600;
+  margin-top: 0;
+}
+.description-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+}
